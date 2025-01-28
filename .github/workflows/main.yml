@@ -1,0 +1,14 @@
+name: Greeting Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  greet:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Print greeting
+        run: echo "Hello, GitHub Actions!"
